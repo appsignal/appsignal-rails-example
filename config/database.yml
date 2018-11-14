@@ -80,6 +80,7 @@ test:
 #
 production:
   <<: *default
-  database: appsignal-rails-example_production
-  username: appsignal-rails-example
-  password: <%= ENV['APPSIGNAL-RAILS-EXAMPLE_DATABASE_PASSWORD'] %>
+  username: <%= ENV['POSTGRESQL_USERNAME'] %>
+  password: <%= ENV['POSTGRESQL_PASSWORD'] %>
+  database: <%= ENV['POSTGRESQL_DATABASE'] %>
+  host: <%= ENV['POSTGRESQL_ADDRESS'] %>
